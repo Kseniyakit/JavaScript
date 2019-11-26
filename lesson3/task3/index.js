@@ -8,7 +8,7 @@ console.log("a == b: ", a == b);
 console.log("a != b: ", a != b);
 
 /* сравнение строк */
-console.log("'a' < 'b': ", 'a' > 'b');
+console.log("'a' < 'b': ", 'a' < 'b');
 console.log("'ab' > 'a': ", 'ab' > 'a');
 
 /* строгое сравнение */
