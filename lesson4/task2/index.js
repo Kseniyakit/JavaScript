@@ -7,4 +7,4 @@ do{
     }
     m++
 } while (m<=n);
-console.log(result);
+console.log('Result: ' + result);
