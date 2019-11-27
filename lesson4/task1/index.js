@@ -1,8 +1,9 @@
-
+let n = 200;
 let sum = 0;
-for (let n = 100; n <= 200; n++){
-    if (n > 99){
-        sum +=n
-    }
+
+while ( n > 99) {
+    sum += n;
+    n -= 1;
 }
-console.log(sum);
+
+console.log(sum); 
