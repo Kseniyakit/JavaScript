@@ -1,4 +1,5 @@
 let n = 200;
+n >= 100;
 let sum = 0;
 
 while ( n >= 100) {
@@ -6,4 +7,4 @@ while ( n >= 100) {
     n -= 1;
 }
 
-console.log('Result: ' + sum);
+console.log('Sum: ' + sum);
