@@ -1,5 +1,5 @@
 
-let arr = [2, 5, 6, 1200, 12, 15, 0, 3, -8, 9];
+
 let max = getMaxValue(arr);
 let min = getMinValue(arr);
 
@@ -22,4 +22,3 @@ function getMinValue(arr){
 function checker(arr){
     return (min + max > 1000) ? true : false;
 }
-console.log(checker(arr));
