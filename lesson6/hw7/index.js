@@ -20,8 +20,6 @@ function getMinValue(arr){
     return min;
 }
 function checker(arr){
-    let sum = max + min;
-    if (sum<1000) return ('false')
-    else return ('true');
+    return (min + max > 1000) ? true : false;
 }
 console.log(checker(arr));
