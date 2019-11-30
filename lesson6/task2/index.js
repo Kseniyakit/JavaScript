@@ -5,7 +5,7 @@ function getSum(numbers){
     for(let i=0; i<numbers.length; i++){
        sumOfNumbers+= numbers[i];
     }
-    if (!Array.isArray){
+    if (!getSum.isArray){
         return null;
     }
     return sumOfNumbers;
