@@ -1,22 +1,24 @@
 function sortAsc(array){
     for (let i=0; i<array.length; i++){
-    for (let j=0; j<array.length; j++){
-        if (array[i]<array[j]){
+    for (let j=0; j<array.length; j++) {
+        if (array[i]<array[j]) {
            let bols = array[i];
            array [i]= array [j];
-           array [j]= bols;} 
+           array [j]= bols;
     }
    }  
+}
    return array;
 } 
 
-function sortDes(array){
+function sortDesc(array){
     for (let i=0; i<array.length; i++){
     for (let j=0; j<array.length; j++){
         if (array[i]>array[j]){
            let bols = array[i];
            array [i]= array [j];
-           array [j]= bols;} 
+           array [j]= bols;
+        } 
     }
    }  
    return array;
