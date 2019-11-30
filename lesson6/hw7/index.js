@@ -1,10 +1,4 @@
 
-
-let max = getMaxValue(arr);
-let min = getMinValue(arr);
-
- 
-
 function getMaxValue(arr){
     let max = arr[0]; 
     for (let i = 0; i < arr.length; i++) { 
@@ -20,5 +14,7 @@ function getMinValue(arr){
     return min;
 }
 function checker(arr){
+    let max = getMaxValue(arr);
+let min = getMinValue(arr);
     return (min + max > 1000) ? true : false;
 }
