@@ -6,11 +6,10 @@ function reverseArray(array){
         return null;
     } else {
         for (let i = array.length-1; i>=0; i--){
-          let number =  array.pop(i);
-          specialArray.push(number);
+            specialArray.push(array[i]);
         }
     }
     return specialArray;
 }
-const specialArray = reverseArray(array);
+const specialArray = reverseArray(array)
 console.log(specialArray);
