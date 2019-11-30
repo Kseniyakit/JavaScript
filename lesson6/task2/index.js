@@ -1,6 +1,6 @@
 const numbers = [33, 76, 51, 48];
 
-function getSum(arr){
+function getSum(numbers){
     let sumOfNumbers = 0;
     for(let i=0; i<numbers.length; i++){
        sumOfNumbers+= numbers[i];
