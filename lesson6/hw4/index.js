@@ -1,12 +1,18 @@
 const array = [5, 6, 5, 7, 8];
 
 function uniqueCount(array){
-let result = [];
-for(let i of array){
-    if(!result.includes(i)){
-        result.push(i);
+    let result = 0;
+    let countUnique = 0;
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        countUnique++;
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[j] == array[i]) {
+                count++;
+            }
+        }
     }
-}
-return result;
-}
+    return result = countUnique - count;
+    console.log(result);
+} 
 console.log(uniqueCount(array));
