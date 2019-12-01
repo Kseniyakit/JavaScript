@@ -4,4 +4,4 @@ const reverseArray = copy =>
   (!Array.isArray(copy))
      ? null : copy.reverse();
 
- console.log(reverseArray(number));
+ console.log(reverseArray(copy));
