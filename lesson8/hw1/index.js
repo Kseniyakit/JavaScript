@@ -11,3 +11,6 @@ function pickProps (obj, arr){
     return result;
 } 
 console.log(pickProps(obj, arr));
+
+
+
