@@ -18,7 +18,8 @@ const rooms = {
 const getPeople = roomObj => {
     const roomArray = Object.values(roomObj).reduce((acc, elem) => 
     acc.concat(elem),[])
-    .map(elem => elem.name);;
+    .map(elem => elem.name);
    return roomArray; 
 }
 console.log(getPeople(rooms));
+
