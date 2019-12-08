@@ -1,6 +1,6 @@
 const users = {
     'John Doe': 19,
-     'Tom': 17,``
+     'Tom': 17,
     'Bob': 18,
 };
 const getAdults = usersObj => {
@@ -12,3 +12,4 @@ const getAdults = usersObj => {
     return usersNames;
 }
 console.log(getAdults(users));
+
