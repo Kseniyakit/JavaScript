@@ -1,6 +1,6 @@
 const users = {
     'John Doe': 19,
-     'Tom': 17,
+     'Tom': 17,``
     'Bob': 18,
 };
 const getAdults = usersObj => {
