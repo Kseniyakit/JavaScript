@@ -10,7 +10,7 @@ const customers = {
 };
 function getCustomersList(obj){
     let object = Object.assign({}, obj);
-    let arr = Object.entries(obj)
+    let arr = Object.entries(object)
     .map(x => x ={...x[1], id: x[0]} )
     .sort((a,b)=>a.age > b.age ? 1 : -1);
     return arr;

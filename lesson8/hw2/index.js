@@ -11,3 +11,4 @@ for(let key in users){
 return result;
 }
 console.log (getAdults(users));
+
