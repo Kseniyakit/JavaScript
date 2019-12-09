@@ -6,7 +6,7 @@ const getRandomNumbers = (l,min,max) =>{
   const arr = [];
 
 
-  if (max<min || ((max-min)<0)&& Math.ceil(max) === Math.ceil(min)){
+  if (max<min || ((max-min)<1)){
       return null;
   }
 for(let i=0; i<l; i++){
