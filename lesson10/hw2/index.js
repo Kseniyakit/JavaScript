@@ -4,8 +4,7 @@ let max = 7.9765;
 
 const getRandomNumbers = (l,min,max) =>{
   const arr = [];
-  min = Math.ceil(min);
-  max = Math.floor(max);
+
   if (max<min || (0<(max-min)<1)){
       return null;
   }
@@ -17,8 +16,10 @@ return arr;
 };
 
 
-const randomInteger =(min, max) =>
+const randomInteger =(min, max) =>{
+    min = Math.ceil(min);
+    max = Math.floor(max);
 Math.floor(min + Math.random() * (max - min))
-;
+};
   
 console.log(getRandomNumbers(l,min,max));
