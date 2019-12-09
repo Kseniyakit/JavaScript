@@ -5,7 +5,7 @@ let max = 7.9765;
 const getRandomNumbers = (l,min,max) =>{
   const arr = [];
 
-  if (max<min || ((max-min)<1)&& Math.floor(max) === Math.ceil(min)){
+  if (max<min || ((max-min)<1) && Math.ceil(max) === Math.ceil(min)){
       return null;
   }
 for(let i=0; i<l; i++){
