@@ -4,23 +4,24 @@ let max = 7.9765;
 
 const getRandomNumbers = (l,min,max) =>{
   const arr = [];
-  min = Math.ceil(min);
-  max = Math.floor(max);
+ min = Math.ceil(min);
+ max = Math.floor(max);
 
   if (max<min || (0<(max-min)<1)){
       return null;
   }
-for(let i=0; i<=(l-1); i++){
+for(let i=0; i<l; i++){
 
 arr.push(randomInteger(min,max))
-};
+}
 return arr;
 };
 
 
 const randomInteger =(min, max) =>{
    
-Math.floor(min + Math.random() * (max - min))
+return Math.floor(Math.random() * (max - min)) + min;
 };
   
-console.log(getRandomNumbers(l,min,max));
+console.log(getRandomNumbers(l,min,max)); 
+
