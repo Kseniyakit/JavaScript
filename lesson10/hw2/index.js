@@ -4,6 +4,9 @@ let max = 7.9765;
 
 const getRandomNumbers = (l,min,max) =>{
   const arr = [];
+  if (max<min || (max-min)<0){
+      return null;
+  }
 for(let i=0; i<=l; i++){
 
 arr.push(randomInteger(min,max));
