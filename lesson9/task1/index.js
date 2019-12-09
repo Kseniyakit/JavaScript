@@ -12,3 +12,4 @@ const getAdults = usersObj => {
     return usersNames;
 }
 console.log(getAdults(users));
+

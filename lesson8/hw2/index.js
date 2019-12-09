@@ -6,8 +6,9 @@ const users = {
 const getAdults =users =>{
     let result ={};
 for(let key in users){
-    if (users[key] >= 18) result[key]=users[key];
+    (users[key] >= 18) ? result[key]=users[key]: 0;
 }
 return result;
 }
 console.log (getAdults(users));
+
