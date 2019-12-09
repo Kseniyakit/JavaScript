@@ -9,7 +9,7 @@ const getRandomNumbers = (l,min,max) =>{
   if (max<min || (max-min)<0){
       return null;
   }
-for(let i=0; i<=l; i++){
+for(let i=0; i<=(l-1); i++){
 
 arr.push(randomInteger(min,max));
 }
