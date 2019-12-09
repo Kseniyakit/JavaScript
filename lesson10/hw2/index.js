@@ -10,23 +10,9 @@ const getRandomNumbers = (l,min,max) =>{
       return null;
   }
   min = Math.ceil(min);
-    max = Math.floor(max);
+  max = Math.floor(max);
   return arr.fill()
   .map(() => Math.floor(Math.random()*(max-min)+min));
 }
-/* for(let i=0; i<l; i++){
-arr.push(randomInteger(min,max))
-}
-
-return arr;
-};
-
-
-const randomInteger =(min, max) =>{
-min = Math.ceil(min);
- max = Math.floor(max);
-return Math.floor(Math.random() * (max - min) + min);
-};
-   */
 console.log(getRandomNumbers(l,min,max)); 
 
