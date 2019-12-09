@@ -9,6 +9,8 @@ const getRandomNumbers = (l,min,max) =>{
   if (max<min || ((max-min)<1) && Math.ceil(max) === Math.ceil(min)){
       return null;
   }
+  min = Math.ceil(min);
+    max = Math.floor(max);
   return arr.fill()
   .map(() => Math.floor(Math.random()*(max-min)+min));
 }
