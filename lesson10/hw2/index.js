@@ -4,6 +4,8 @@ let max = 7.9765;
 
 const getRandomNumbers = (l,min,max) =>{
   const arr = [];
+  min = Math.round(min);
+  max = Math.round(max);
   if (max<min || (max-min)<0){
       return null;
   }
