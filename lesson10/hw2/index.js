@@ -10,8 +10,10 @@ const getRandomNumbers = (l,min,max) =>{
       return null;
   }
 for(let i=0; i<l; i++){
-
 arr.push(randomInteger(min,max))
+}
+for (let i = 0; i < l; i++) {
+    if (arr[i] !== Math.trunc(arr[i])) return null;
 }
 return arr;
 };
