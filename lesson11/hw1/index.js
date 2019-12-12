@@ -1,7 +1,8 @@
-const splitString = (string, len) => {
+const splitString = (string, len=10) => {
+    if (typeof string !== 'string') return null;
     const strArr = [];
     let startPosition = 0;
-    if (typeof str !== 'string') return null;
+    
 while(true){
     let chunk = string.substr(startPosition, len);
     if(chunk.length === 0) {
@@ -17,4 +18,4 @@ while(true){
     }
     return strArr;
 };
-console.log (splitString( 'gkjgkjgkjh iukjklhjkl yihkjhjh', 5));
+console.log (splitString( 'gkjgkjgkjh iukjklhjkl yihkjhjh'));
