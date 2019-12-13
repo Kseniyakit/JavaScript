@@ -1,17 +1,26 @@
-function splitText(str, len = 10) {
-    if (typeof str !== 'string') return null;
-    let arr = [];
+let splitText = (text, len ) => { 
+    
+    const strArr = []; 
     let startPosition = 0;
-    while (true) {
-        let result = str.substr(startPosition, len);
-        if (result.length === 0) {
+
+    if (len === undefined) {
+        len = 10;
+    }
+
+    if (typeof text !== 'string') return null;
+    
+    while(true) { 
+        let chunk = text.substr(startPosition, len); 
+        if (chunk.length === 0 ) { 
             break;
         }
-        arr.push(result[0].toUpperCase() + result.slice(1));
+
+        
         startPosition += len;
+        strArr.push(chunk[0].toUpperCase() + chunk.slice(1)); 
     }
-    return arr.join('\n');
-}
+    return strArr.join('\n');
+};
 
 
 
