@@ -1,7 +1,9 @@
 const splitText = (text, len=10) => {
     const strArr = [];
     let startPosition = 0;
-    if (typeof text !== 'string') continue;
+    if (typeof text !== 'string') {
+        break;
+    }
   while(len){
     let chunk = text.substr(startPosition, len);
  
