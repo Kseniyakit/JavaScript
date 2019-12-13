@@ -4,7 +4,7 @@ const splitText = (text, len=10) => {
     
   while(len){
     let chunk = text.substr(startPosition, len);
-    if (typeof text !== 'string') return null;
+    if (typeof text !== 'string') {break;};
     if(chunk.length === 0) {
         break;
     }
