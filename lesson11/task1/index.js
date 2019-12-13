@@ -8,7 +8,7 @@ function splitText(text, numberCut) {
     if (numberCut === undefined) {
         numberCut = 10;
     }
-    while (true) {
+    while (text.lenght > 0) {
         let str = text.substr(start, numberCut);
         if (str.length === 0) {
             break;
