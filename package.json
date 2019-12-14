@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Kseniyakit/JavaScript/issues"
   },
-  "homepage": "https://github.com/Kseniyakit/JavaScript#readme"
+  "homepage": "https://github.com/Kseniyakit/JavaScript#readme",
+  "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.7.6"
+  }
 }
