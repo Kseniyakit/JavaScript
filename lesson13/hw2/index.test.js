@@ -1,4 +1,4 @@
-import { calc } from './calc.js';
+import { calc } from './index.js';
 it ('should sum two numbers', () =>{
     const result = calc ('2 + 3');
     expect(result).toEqual('2 + 3 = 5');
