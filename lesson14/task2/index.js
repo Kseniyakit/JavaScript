@@ -1,4 +1,5 @@
-export default function createMessenger() {
+/*  const createMessanger=() =>{}; */
+ function createMessanger() {
     let sender = 'Gromcode';
     let message = 'Just learn it!';
 
@@ -20,3 +21,13 @@ export default function createMessenger() {
         setSender,
     }
 }
+const messanger = createMessanger();
+messanger.sendMessage("Bob");
+messanger.setMessage("Good job!");
+messanger.setSender("Gromcode");
+/* const r = createMessenger();
+r.sendMessage("Bob");
+r.setMessage("Good job!");
+ r.setSender("g");
+ r.sendMessage("Bob");
+ */
