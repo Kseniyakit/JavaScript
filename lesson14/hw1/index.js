@@ -1,6 +1,6 @@
 let result = 0;
 export function add(num) {
-    return resalt += num;
+    return result += num;
 };
 export function decrease (num){
     return result -=num;
