@@ -32,7 +32,7 @@ export const createLogger = () => {
 
         getRecords: str => {
             if (!str || typeof str!= 'string') {
-                return result.push({});
+                return result.sort((a, b) => b.dateTime - a.dateTime);
             } else {
                 return result.filter(x => x.type == str)
                 .sort((a,b) => b.dateTime - a.dateTime);
