@@ -3,27 +3,27 @@ export const createLogger = () => {
     const result = [];
 
     return {
-        warn: text => {
+        warn: string => {
             result.push({
-                message: text,
+                message: string,
                 dateTime: new Date(),
                 type: 'warn',
 
             })
         },
 
-        error: text => {
+        error: string => {
             result.push({
-                message: text,
+                message: string,
                 dateTime: new Date(),
                 type: 'error',
 
             })
         },
 
-        log: text => {
+        log: string => {
             result.push({
-                message: text,
+                message: string,
                 dateTime: new Date(),
                 type: 'log',
 
