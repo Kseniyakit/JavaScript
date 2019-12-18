@@ -1,7 +1,7 @@
 
 export const createCalculator = () =>{
     let result = 0;
-    let num = 1;
+  
     function add(num) {
         return result += num;
     };
