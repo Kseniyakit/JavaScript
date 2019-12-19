@@ -1,15 +1,14 @@
-const user = {
+export const user = {
     firstName: 'John',
     secondName: 'Doe',
     getFullName() {
         return (`${this.firstName} ${this.secondName}`);
        
     },
-    setFullName() {
-        const firstName = prompt(this.firstName);
-        const secondName = prompt(this.secondName);
+    setFullName(fullName) {
+      const arr = fullName.split(' ');
+      this.firstName = arr[0];
+      this.secondName = arr[1];
     }
 
 }
-console.log(user.getFullName());
-user.setFullName();
