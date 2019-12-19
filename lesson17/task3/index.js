@@ -1,10 +1,11 @@
 export function defer(func, ms) {
     return function(){
-        setTimeout(func, ms);
+        setTimeout(() => func(...arguments), ms);
     }
 }
 
-const sayHi = () => {
-    console.log('Hi');
+const sum = (a,b) => {
+    console.log(a+b);
 }
-const deferredSayHi = defer(sayHi, 1000);
+const deferredSum = defer(sum, 1000);
+deferredSum(1,4);
