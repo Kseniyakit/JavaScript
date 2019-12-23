@@ -9,7 +9,7 @@ export class User {
     sayHi(){
         console.log(`Hi, I am ${this.name}`);
     };
-    requerstNewPhoto(){
+    requestNewPhoto(){
         console.log(`New photo request was sent for ${this.name}`);
     };
     setAge(value){
@@ -18,11 +18,11 @@ export class User {
         }
         this.age = value;
         if (value >= 25){
-            this.requerstNewPhoto();
+            this.requestNewPhoto();
         }
         return value;
     };
 }
 const user1 = new User('John', 27);
 console.log(user1);
-console.log(user1.requerstNewPhoto());
+console.log(user1.requestNewPhoto());
