@@ -1,4 +1,4 @@
-const vehicle = {
+/* const vehicle = {
     name: 'Argo',
     move() {
         console.log(`${this.name} is moving`);
@@ -20,8 +20,8 @@ const ship = {
     },
     name: 'petya',
 };
-
-const getOwnProps = (obj) => {
+ */
+export const getOwnProps = (obj) => {
     let arr = [];
     for(let prop in obj) {
         if (obj.hasOwnProperty(prop) && typeof obj[prop] !== 'function')
