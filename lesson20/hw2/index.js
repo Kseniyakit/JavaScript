@@ -21,10 +21,10 @@ export class UserRepository{
     get users(){
         return this._users;
     }
-    getUsrNames(){
+    getUserNames(){
 return this.users.map(item => item.name);
     }
-    getUsersIds(){
+    getUserIds(){
 return this.users.map(item => item.id);
     }
     getUserNameById(id){
