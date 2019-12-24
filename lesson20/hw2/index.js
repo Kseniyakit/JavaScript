@@ -14,7 +14,7 @@ export class User {
         return this._sessionId;
     }
 }
-class UserRepository{
+export class UserRepository{
     constructor(users){
         this._users = Object.freeze(users);
     }
