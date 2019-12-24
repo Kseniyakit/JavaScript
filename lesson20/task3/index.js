@@ -8,7 +8,7 @@ export class Wallet {
     deposit(amount){
         this._balance += amount;
     }
-    withwraw(amount){
+    withdraw(amount){
         if (amount > this._balance){
             console.log('No enough funds');
             return;
@@ -20,5 +20,5 @@ const wallet1 = new Wallet();
 console.log(wallet1.getBalance());
 wallet1.deposit(45);
 console.log(wallet1.getBalance());
-wallet1.withwraw(100);
+wallet1.withdraw(100);
 console.log(wallet1.getBalance());
