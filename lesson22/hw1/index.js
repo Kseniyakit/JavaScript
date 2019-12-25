@@ -1,56 +1,58 @@
-const creat = document.querySelector(".create-task-btn");
-
 let tasks =   [
     { text: 'Visit party', done: false },
     { text: 'Pick up Tom from airport', done: false },
     { text: 'Buy milk', done: false },
-    { text: 'Buy meat', done: true },
-    { text: 'Visit doctor', done: true }
+    { text: 'Buy meat', done: false },
+    { text: 'Visit doctor', done: false}
 ];
+const addElement = document.querySelector(".create-task-btn");
 
-
-const creatObj = () => {
+const addTasks = () => {
     const inputText = document.querySelector(".task-input").value;
     const obj =  {
         text: inputText,
-        done: false
+        done: false,
     };
     tasks.unshift(obj);
-    render(tasks);
+    document.querySelector(".task-input").value= "";
+    renderListItems(tasks);
 }
 
-creat.addEventListener('click', creatObj);
+addElement.addEventListener('click', addTasks);
 
-function render (arr) {
-    const list = document.querySelector('.list');
-
-    let listItems = arr.sort((a,b) => a.done - b.done).map(({text,done}) => {
+const renderListItems = listItems => {
+    const listElem = document.querySelector('.list');
+    const listItemsElems = listItems
+    .sort((a,b) => a.done - b.done)
+    .map(({text, done}) =>{
         const listItemElem = document.createElement('li');
-        const checkBox = document.createElement('input');
-        checkBox.setAttribute('type','checkbox');
-        checkBox.classList.add('list__item-checkbox');
-        checkBox.checked = done;
         listItemElem.classList.add('list__item');
-        listItemElem.append(checkBox,text);
-        if (done) {
-            listItemElem.classList.add('list__item_done')
+        if(done) {
+            listItemElem.classList.add('list__item_done');
         }
+        const checkboxElem = document.createElement('input');
+        checkboxElem.setAttribute('type', 'checkbox');
+        checkboxElem.checked = done;
+       
+        checkboxElem.classList.add('list__item-checkbox');
+        listItemElem.append(checkboxElem, text);
         return listItemElem;
     });
-    list.innerHTML = null;
-    return list.append(...listItems);
-};
-render(tasks);
+    listElem.innerHTML = "";
+   listElem.append(...listItemsElems);
+}
+renderListItems(tasks);
 
 document.querySelector('.list').addEventListener('click',function (event) {
     if (event.target.className === 'list__item-checkbox') {
-        event.target.parentElement.classList.toggle('done');
-        const stringText = event.target.parentElement.textContent;
-        tasks.map((elem) => {
+        event.target.parentElement.classList.toggle('list__item_done');
+
+    const stringText = event.target.parentElement.textContent;
+       tasks.map((elem) => {
             if (elem.text === stringText) {
                 elem.done === false ? elem.done = true : elem.done = false;
             }
-        });
-        render(tasks);
+        }) ;
+        renderListItems(tasks);
     }
-});
+}); 
