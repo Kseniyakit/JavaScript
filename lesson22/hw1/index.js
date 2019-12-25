@@ -2,8 +2,8 @@ let tasks =   [
     { text: 'Visit party', done: false },
     { text: 'Pick up Tom from airport', done: false },
     { text: 'Buy milk', done: false },
-    { text: 'Buy meat', done: false },
-    { text: 'Visit doctor', done: false}
+    { text: 'Buy meat', done: true },
+    { text: 'Visit doctor', done: true}
 ];
 const addElement = document.querySelector(".create-task-btn");
 
