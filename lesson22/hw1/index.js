@@ -43,7 +43,7 @@ const renderListItems = listItems => {
 }
 renderListItems(tasks);
 
-document.querySelector('.list').addEventListener('click',function (event) {
+const checkBoxToggle = document.querySelector('.list').addEventListener('click',function (event) {
     if (event.target.className === 'list__item-checkbox') {
         event.target.parentElement.classList.toggle('list__item_done');
 
