@@ -1,9 +1,9 @@
 let tasks =   [
-    { text: 'Visit party', done: false, date: new Date(2019,11,31), },
-    { text: 'Pick up Tom from airport', done: false, date: new Date(2019,11,26), },
-    { text: 'Buy milk', done: false, date: new Date(2020,8,9), },
-    { text: 'Buy meat', done: true, date: new Date(2019,6,16), },
-    { text: 'Visit doctor', done: true, date: new Date(2019,9,5), }
+    { text: 'Visit party', done: false, date: new Date(2019,11,31), dateFinish: undefined },
+    { text: 'Pick up Tom from airport', done: false, date: new Date(2019,11,26), dateFinish: undefined  },
+    { text: 'Buy milk', done: false, date: new Date(2020,8,9), dateFinish: undefined },
+    { text: 'Buy meat', done: true, date: new Date(2019,6,16), dateFinish: new Date(2019, 7, 24) },
+    { text: 'Visit doctor', done: true, date: new Date(2019,9,5), dateFinish: new Date(2019, 10, 4) },
 ];
 const addElement = document.querySelector(".create-task-btn");
 
@@ -13,6 +13,7 @@ const addTasks = () => {
         text: inputText,
         done: false,
         date: new Date(),
+        dateFinish: undefined,
     };
     tasks.unshift(obj);
     document.querySelector(".task-input").value= "";
@@ -26,6 +27,7 @@ const renderListItems = listItems => {
     const listItemsElems = listItems
     .sort((a,b) => b.date - a.date)
     .sort((a,b) => a.done - b.done)
+    .sort((a,b)=> b.dateFinish - a.dateFinish)
     .map(({text, done}) =>{
         const listItemElem = document.createElement('li');
         listItemElem.classList.add('list__item');
@@ -55,7 +57,7 @@ const checkBoxToggle = document.querySelector('.list').addEventListener('click',
                 elem.done === false ? elem.done = true : elem.done = false;
             }
         }) ;
-        Object.assign(taskCheck, {date: new Date()});
+       /*  Object.assign(taskCheck, {date: new Date()}); */
         renderListItems(tasks);
     }
 }); 
