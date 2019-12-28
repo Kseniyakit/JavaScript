@@ -2,7 +2,7 @@
 const months = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ];
-const studentsBirthDays = students =>{
+export const studentsBirthDays = students =>{
     let birthObj = {}
     let studentsArray = [...students];
     studentsArray
