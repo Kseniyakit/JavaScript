@@ -1,10 +1,10 @@
 let tasks =   [
-    
-    { text: 'Visit party', done: false, date: new Date(2019,11,31), dateFinish: undefined },
-    { text: 'Pick up Tom from airport', done: false, date: new Date(2019,11,26), dateFinish: undefined  },
-    { text: 'Buy milk', done: false, date: new Date(2020,8,9), dateFinish: undefined },
-    { text: 'Buy meat', done: true, date: new Date(2019,6,16), dateFinish: new Date(2019, 7, 24) },
-    { text: 'Visit doctor', done: true, date: new Date(2019,9,5), dateFinish: new Date(2019, 10, 4) },
+
+    { text: 'Visit party', done: false, date: new Date(2020,8,9), dateFinish: undefined },
+    { text: 'Pick up Tom from airport', done: false, date: new Date(2019,11,31), dateFinish: undefined  },
+    { text: 'Buy milk', done: false, date: new Date(2019,11,26), dateFinish: undefined },
+    { text: 'Buy meat', done: true, date: new Date(2019,9,5), dateFinish: new Date(2019, 10, 4) },
+    { text: 'Visit doctor', done: true, date: new Date(2019,6,16), dateFinish: new Date(2019, 7, 24) },
   
 ];
 const addElement = document.querySelector(".create-task-btn");
